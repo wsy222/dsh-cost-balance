@@ -1,0 +1,5 @@
+# dsh-cost-balance 的 bundle patch：插入插件行。
+# host 半 = 包默认导出（lib/index.js）；client 半由 dsh.client 标记自动扫描。
+- insert:
+    - id: cost-balance
+      name: dsh-cost-balance
