@@ -1,5 +1,9 @@
 # dsh-cost-balance
 
+[![npm version](https://img.shields.io/npm/v/dsh-cost-balance)](https://www.npmjs.com/package/dsh-cost-balance)
+[![npm downloads](https://img.shields.io/npm/dm/dsh-cost-balance)](https://www.npmjs.com/package/dsh-cost-balance)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+
 DeepSeek Harness（DSH）Web UI 插件：在输入框下方显示一条 iOS 风格的小黑条，点击展开轻盈的半透明多行面板，查看**会话花费、账户余额、缓存命中、Token 用量**等统计。
 
 默认折叠为一条居中的小黑条（类似 iOS 底部横条），点击展开毛玻璃面板：
@@ -14,11 +18,13 @@ DeepSeek Harness（DSH）Web UI 插件：在输入框下方显示一条 iOS 风�
 | 花费 | $0.0123（本会话，按官方定价） |
 | 余额 | ¥9.00（DeepSeek 账户实时余额，60s 自动刷新） |
 
-## 安装
+## 安装（npm 发布版）
 
 ```sh
 dsh plugin --profile web add dsh-cost-balance
 ```
+
+> 该命令从 npm registry 拉取已发布的 [dsh-cost-balance](https://www.npmjs.com/package/dsh-cost-balance)（dsh.bundle），自动加入 profile 的 bundle 层。
 
 然后重启（或刷新）DSH Web UI。卸载：`dsh plugin --profile web remove dsh-cost-balance`。
 
@@ -60,6 +66,8 @@ git clone https://github.com/zoumutou/dsh-cost-balance.git
 cd dsh-cost-balance
 dsh plugin --profile web add .
 ```
+
+发布新版本：修改 `package.json` 的 `version` 后 `npm publish`（账号需 2FA 绕过 token，见 npm 文档）。
 
 ## 许可
 
